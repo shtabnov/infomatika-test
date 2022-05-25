@@ -1,3 +1,9 @@
-# gulp_tamplate
+# infomatika-test
 
-my gulp build for website layout
+Тестовое задание.
+
+![](https://github.com/some-yummy-nick/infomatika-test/raw/master/image.jpg)
+
+https://github.com/some-yummy-nick/infomatika-test
+
+
