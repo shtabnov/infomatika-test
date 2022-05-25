@@ -20,6 +20,7 @@ for (let blocksItem of blocks) {
         }
 
         if (target.classList.contains('one')) {
+            count = 200;
             blocks.forEach(el => el.classList.remove('preprev', 'prev', 'next', 'prenext', 'active', 'prevnone', 'nextnone'));
             for(let i=0; i < blocks.length; i++) {
                 blocks[i].classList.add(obj.one[i]);
@@ -27,6 +28,7 @@ for (let blocksItem of blocks) {
         }
 
         if (target.classList.contains('two')) {
+            count = 100;
             blocks.forEach(el => el.classList.remove('preprev', 'prev', 'next', 'prenext', 'active', 'prevnone', 'nextnone'));
             for(let i=0; i < blocks.length; i++) {
                 blocks[i].classList.add(obj.two[i]);
@@ -34,6 +36,7 @@ for (let blocksItem of blocks) {
         }
 
         if (target.classList.contains('three')) {
+            count = 0;
             blocks.forEach(el => el.classList.remove('preprev', 'prev', 'next', 'prenext', 'active', 'prevnone', 'nextnone'));
             for(let i=0; i < blocks.length; i++) {
                 blocks[i].classList.add(obj.three[i]);
@@ -41,6 +44,7 @@ for (let blocksItem of blocks) {
         }
 
         if (target.classList.contains('four')) {
+            count = -100;
             blocks.forEach(el => el.classList.remove('preprev', 'prev', 'next', 'prenext', 'active', 'prevnone', 'nextnone'));
             for(let i=0; i < blocks.length; i++) {
                 blocks[i].classList.add(obj.four[i]);
@@ -48,6 +52,7 @@ for (let blocksItem of blocks) {
         }
 
         if (target.classList.contains('five')) {
+            count = -200;
             blocks.forEach(el => el.classList.remove('preprev', 'prev', 'next', 'prenext', 'active', 'prevnone', 'nextnone'));
             for(let i=0; i < blocks.length; i++) {
                 blocks[i].classList.add(obj.five[i]);
