@@ -4,6 +4,6 @@
 
 ![](https://github.com/some-yummy-nick/infomatika-test/raw/master/image.jpg)
 
-https://github.com/some-yummy-nick/infomatika-test
+[Ссылка на задание Github](https://github.com/some-yummy-nick/infomatika-test)
 
 
