@@ -78,7 +78,6 @@ if (wrapper.addEventListener) {
 
 function onWheel(e) {  
     e = e || window.event;
-    
     var delta = e.deltaY || e.detail || e.wheelDelta;
 
     count = count + delta;
