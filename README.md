@@ -8,3 +8,5 @@
 
 [Ссылка на GithubPages](https://shtabnov.github.io/infomatika-test/build/index.html)
 
+Версия для Desktop
+
