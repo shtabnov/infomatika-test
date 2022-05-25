@@ -1,0 +1,376 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
+body {
+  font-family: "Roboto Condensed";
+  margin: 0;
+  padding: 0px 0px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover {
+  color: gray;
+  transition: 300ms;
+}
+
+[class*=__container] {
+  max-width: 1290px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1180px) {
+  [class*=__container] {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+.hero {
+  background: radial-gradient(circle at center, #5E5C8E, #111a3f, #020923);
+  width: 100vw;
+  height: 100vh;
+}
+.hero__wrapper {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.hero__circle {
+  display: block;
+  position: absolute;
+  user-select: none;
+  border: 1px solid white;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hero__circle-inner {
+  height: 66vh;
+  width: 66vh;
+}
+.hero__circle-outer {
+  height: 110vh;
+  width: 110vh;
+}
+.hero__hex {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background-image: url("../images/hex-b.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 500ms;
+}
+.hero__hex h2, .hero__hex h3, .hero__hex p, .hero__hex a {
+  transition: font-size 500ms, visibility 0.5s, opacity 0.5s linear;
+}
+.hero__hex h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.hero__hex h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.hero__hex p {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.hero__hex span {
+  position: absolute;
+  font-weight: 700;
+  transition: 600ms;
+}
+.hero__hex span:nth-child(1) {
+  top: 17%;
+  left: -35vw;
+  font-size: 3.5rem;
+}
+.hero__hex span:nth-child(2) {
+  bottom: 17%;
+  right: -35vw;
+  font-size: 3.5rem;
+}
+.hero__hex a {
+  font-size: 1.5rem;
+  display: block;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.5rem;
+}
+.hero__hex a:hover {
+  background-color: #f7ffce;
+  transition: 400ms;
+}
+.hero .preprev {
+  top: 22vh;
+  left: calc(50% + 47vh);
+  height: 16vh;
+  width: 16vh;
+}
+.hero .preprev h3, .hero .preprev p, .hero .preprev a {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+.hero .preprev h2 {
+  font-size: 1.2rem;
+  width: min-content;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.hero .preprev span {
+  position: absolute;
+  font-weight: 700;
+}
+.hero .preprev span:nth-child(1) {
+  top: 17%;
+  left: -442vh;
+  font-size: 3.5rem;
+}
+.hero .preprev span:nth-child(2) {
+  bottom: 17%;
+  right: -442vh;
+  font-size: 3.5rem;
+}
+.hero .prev {
+  top: 34vh;
+  left: calc(50% + 27vh);
+  height: 22vh;
+  width: 22vh;
+}
+.hero .prev h3, .hero .prev p, .hero .prev a {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+.hero .prev h2 {
+  font-size: 2rem;
+  width: min-content;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.hero .prev span {
+  position: absolute;
+  font-weight: 700;
+}
+.hero .prev span:nth-child(1) {
+  top: 17%;
+  left: -442vh;
+  font-size: 3.5rem;
+}
+.hero .prev span:nth-child(2) {
+  bottom: 17%;
+  right: -442vh;
+  font-size: 3.5rem;
+}
+.hero .active {
+  height: 35vh;
+  width: 35vh;
+}
+.hero .next {
+  top: 65vh;
+  left: calc(50% - 27vh);
+  height: 22vh;
+  width: 22vh;
+}
+.hero .next h3, .hero .next p, .hero .next a {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+.hero .next h2 {
+  font-size: 2rem;
+  width: min-content;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.hero .next span {
+  position: absolute;
+  font-weight: 700;
+}
+.hero .next span:nth-child(1) {
+  top: 17%;
+  left: -442vh;
+  font-size: 3.5rem;
+}
+.hero .next span:nth-child(2) {
+  bottom: 17%;
+  right: -442vh;
+  font-size: 3.5rem;
+}
+.hero .prenext {
+  top: 77vh;
+  left: calc(50% - 48vh);
+  height: 16vh;
+  width: 16vh;
+}
+.hero .prenext h3, .hero .prenext p, .hero .prenext a {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+.hero .prenext h2 {
+  font-size: 1.2rem;
+  width: min-content;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.hero .prenext span {
+  position: absolute;
+  font-weight: 700;
+}
+.hero .prenext span:nth-child(1) {
+  top: 17%;
+  left: -442vh;
+  font-size: 3.5rem;
+}
+.hero .prenext span:nth-child(2) {
+  bottom: 17%;
+  right: -442vh;
+  font-size: 3.5rem;
+}
+.hero .nextnone {
+  top: 11vh;
+  left: calc(50% + 60vh);
+  height: 10vh;
+  width: 10vh;
+  transform: scale(0);
+}
+.hero .nextnone h2, .hero .nextnone h3, .hero .nextnone p, .hero .nextnone a {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+.hero .nextnone span {
+  display: none;
+}
+.hero .prevnone {
+  top: 89vh;
+  left: calc(50% - 65vh);
+  height: 10vh;
+  width: 10vh;
+  transform: scale(0);
+}
+.hero .prevnone h2, .hero .prevnone h3, .hero .prevnone p, .hero .prevnone a {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+.hero .prevnone span {
+  display: none;
+}
+.hero__player {
+  position: absolute;
+  width: 40vw;
+  height: 14vh;
+  background-color: transparent;
+}
+.hero .left {
+  top: 35%;
+  left: 0;
+  background-image: url("../images/path.svg");
+  background-position: right;
+  background-size: cover;
+  z-index: 5;
+}
+.hero .right {
+  bottom: 35%;
+  right: 0;
+  background-image: url("../images/path.svg");
+  background-size: cover;
+  z-index: 5;
+}
+
+.header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  font-size: 1.2rem;
+  color: white;
+  z-index: 100;
+}
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.nav__list {
+  display: flex;
+}
+.nav__item:not(:last-child) {
+  margin-right: 5rem;
+}
+.nav__link {
+  color: white;
+}
+
+.control {
+  display: flex;
+}
+.control__enter {
+  display: flex;
+  align-items: center;
+  margin-right: 3rem;
+}
+.control img {
+  height: 1.7rem;
+  margin-right: 0.5rem;
+}
+.control__burger {
+  flex: 0 0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+.control__burger span {
+  height: 3px;
+  background-color: white;
+}
+.control__burger span:nth-child(1) {
+  width: 2rem;
+}
+.control__burger span:nth-child(2) {
+  width: 1.3rem;
+}
+.control__burger span:nth-child(3) {
+  width: 1.6rem;
+}

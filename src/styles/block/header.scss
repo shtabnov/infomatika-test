@@ -1,0 +1,83 @@
+.header {
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    font-size: 1.2rem;
+    color: white;
+
+    z-index: 100;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+
+}
+
+.nav {
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+
+        &:not(:last-child) {
+            margin-right: 5rem;
+        }
+    }
+
+    &__link {
+        color: white;
+    }
+    
+}
+
+.control {
+    display: flex;
+    
+    &__enter {
+        display: flex;
+        align-items: center;
+        margin-right: 3rem;
+    }
+
+    & img {
+        height: 1.7rem;
+        margin-right: 0.5rem;
+    }
+
+    &__burger {
+        flex: 0 0 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-around;
+
+        & span {
+            height: 3px;
+            background-color: white;
+
+            &:nth-child(1) {
+                width: 2rem;
+            }
+
+            &:nth-child(2) {
+                width: 1.3rem;
+            }
+
+            &:nth-child(3) {
+                width: 1.6rem;
+            }
+
+            
+        }
+    }
+}
