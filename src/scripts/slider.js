@@ -14,49 +14,49 @@ for (let blocksItem of blocks) {
     blocksItem.addEventListener('click', (event) => {
 
         let target = event.target
-
+        // если клик происходит по тексту, присваеваем target родительский блок в котором находится текст
         if (event.path[0] != blocksItem) {
             target = event.path[1]
         }
 
         if (target.classList.contains('one')) {
             count = 200;
-            blocks.forEach(el => el.classList.remove('preprev', 'prev', 'next', 'prenext', 'active', 'prevnone', 'nextnone'));
-            for(let i=0; i < blocks.length; i++) {
-                blocks[i].classList.add(obj.one[i]);
-            }
+            blocks.forEach((el, index) => {
+                el.classList.remove('preprev', 'prev', 'next', 'prenext', 'active', 'prevnone', 'nextnone');
+                blocks[index].classList.add(obj.one[index]);
+            })
         }
 
         if (target.classList.contains('two')) {
             count = 100;
-            blocks.forEach(el => el.classList.remove('preprev', 'prev', 'next', 'prenext', 'active', 'prevnone', 'nextnone'));
-            for(let i=0; i < blocks.length; i++) {
-                blocks[i].classList.add(obj.two[i]);
-            }
+            blocks.forEach((el, index) => {
+                el.classList.remove('preprev', 'prev', 'next', 'prenext', 'active', 'prevnone', 'nextnone');
+                blocks[index].classList.add(obj.two[index]);
+            })
         }
 
         if (target.classList.contains('three')) {
             count = 0;
-            blocks.forEach(el => el.classList.remove('preprev', 'prev', 'next', 'prenext', 'active', 'prevnone', 'nextnone'));
-            for(let i=0; i < blocks.length; i++) {
-                blocks[i].classList.add(obj.three[i]);
-            }
+            blocks.forEach((el, index) => {
+                el.classList.remove('preprev', 'prev', 'next', 'prenext', 'active', 'prevnone', 'nextnone');
+                blocks[index].classList.add(obj.three[index]);
+            })
         }
 
         if (target.classList.contains('four')) {
             count = -100;
-            blocks.forEach(el => el.classList.remove('preprev', 'prev', 'next', 'prenext', 'active', 'prevnone', 'nextnone'));
-            for(let i=0; i < blocks.length; i++) {
-                blocks[i].classList.add(obj.four[i]);
-            }
+            blocks.forEach((el, index) => {
+                el.classList.remove('preprev', 'prev', 'next', 'prenext', 'active', 'prevnone', 'nextnone');
+                blocks[index].classList.add(obj.four[index]);
+            })
         }
 
         if (target.classList.contains('five')) {
             count = -200;
-            blocks.forEach(el => el.classList.remove('preprev', 'prev', 'next', 'prenext', 'active', 'prevnone', 'nextnone'));
-            for(let i=0; i < blocks.length; i++) {
-                blocks[i].classList.add(obj.five[i]);
-            }
+            blocks.forEach((el, index) => {
+                el.classList.remove('preprev', 'prev', 'next', 'prenext', 'active', 'prevnone', 'nextnone');
+                blocks[index].classList.add(obj.five[index]);
+            })
         }
     })
 }
@@ -86,39 +86,39 @@ function onWheel(e) {
         count = 200;
     }
     if (count < -200) {
-        count = -200
+        count = -200;
     }
 
   e.preventDefault ? e.preventDefault() : (e.returnValue = false);
 
   if (count == 0) {
-    blocks.forEach(el => el.classList.remove('preprev', 'prev', 'next', 'prenext', 'active', 'prevnone', 'nextnone'));
-    for(let i=0; i < blocks.length; i++) {
-        blocks[i].classList.add(obj.three[i]);
-    }
+    blocks.forEach((el, index) => {
+        el.classList.remove('preprev', 'prev', 'next', 'prenext', 'active', 'prevnone', 'nextnone');
+        blocks[index].classList.add(obj.three[index]);
+    })
   }
   if (count == 100) {
-    blocks.forEach(el => el.classList.remove('preprev', 'prev', 'next', 'prenext', 'active', 'prevnone', 'nextnone'));
-    for(let i=0; i < blocks.length; i++) {
-        blocks[i].classList.add(obj.two[i]);
-    }
+    blocks.forEach((el, index) => {
+        el.classList.remove('preprev', 'prev', 'next', 'prenext', 'active', 'prevnone', 'nextnone');
+        blocks[index].classList.add(obj.two[index]);
+    })
   }
   if (count == 200) {
-    blocks.forEach(el => el.classList.remove('preprev', 'prev', 'next', 'prenext', 'active', 'prevnone', 'nextnone'));
-    for(let i=0; i < blocks.length; i++) {
-        blocks[i].classList.add(obj.one[i]);
-    }
+    blocks.forEach((el, index) => {
+        el.classList.remove('preprev', 'prev', 'next', 'prenext', 'active', 'prevnone', 'nextnone');
+        blocks[index].classList.add(obj.one[index]);
+    })
   }
   if (count == -100) {
-    blocks.forEach(el => el.classList.remove('preprev', 'prev', 'next', 'prenext', 'active', 'prevnone', 'nextnone'));
-    for(let i=0; i < blocks.length; i++) {
-        blocks[i].classList.add(obj.four[i]);
-    }
+    blocks.forEach((el, index) => {
+        el.classList.remove('preprev', 'prev', 'next', 'prenext', 'active', 'prevnone', 'nextnone');
+        blocks[index].classList.add(obj.four[index]);
+    })
   }
   if (count == -200) {
-    blocks.forEach(el => el.classList.remove('preprev', 'prev', 'next', 'prenext', 'active', 'prevnone', 'nextnone'));
-    for(let i=0; i < blocks.length; i++) {
-        blocks[i].classList.add(obj.five[i]);
-    }
+    blocks.forEach((el, index) => {
+        el.classList.remove('preprev', 'prev', 'next', 'prenext', 'active', 'prevnone', 'nextnone');
+        blocks[index].classList.add(obj.five[index]);
+    })
   }
 }
