@@ -74,19 +74,17 @@ if (wrapper.addEventListener) {
         wrapper.attachEvent("onmousewheel", onWheel);
     }
 
-
-
 function onWheel(e) {  
     e = e || window.event;
-    var delta = e.deltaY || e.detail || e.wheelDelta;
+    var delta = e.wheelDelta || e.detail || e.deltaY ;
 
     count = count + delta;
 
-    if (count > 200) {
-        count = 200;
+    if (count > 240) {
+        count = 240;
     }
-    if (count < -200) {
-        count = -200;
+    if (count < -240) {
+        count = -240;
     }
 
   e.preventDefault ? e.preventDefault() : (e.returnValue = false);
@@ -97,25 +95,25 @@ function onWheel(e) {
         blocks[index].classList.add(obj.three[index]);
     })
   }
-  if (count == 100) {
+  if (count == 120) {
     blocks.forEach((el, index) => {
         el.classList.remove('preprev', 'prev', 'next', 'prenext', 'active', 'prevnone', 'nextnone');
         blocks[index].classList.add(obj.two[index]);
     })
   }
-  if (count == 200) {
+  if (count == 240) {
     blocks.forEach((el, index) => {
         el.classList.remove('preprev', 'prev', 'next', 'prenext', 'active', 'prevnone', 'nextnone');
         blocks[index].classList.add(obj.one[index]);
     })
   }
-  if (count == -100) {
+  if (count == -120) {
     blocks.forEach((el, index) => {
         el.classList.remove('preprev', 'prev', 'next', 'prenext', 'active', 'prevnone', 'nextnone');
         blocks[index].classList.add(obj.four[index]);
     })
   }
-  if (count == -200) {
+  if (count == -240) {
     blocks.forEach((el, index) => {
         el.classList.remove('preprev', 'prev', 'next', 'prenext', 'active', 'prevnone', 'nextnone');
         blocks[index].classList.add(obj.five[index]);
