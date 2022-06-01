@@ -1,3 +1,8 @@
+html {
+    font-size: 16px;
+    font-size: 1.6vh;
+}
+
 body {
     font-family: 'Roboto Condensed';
     margin: 0;
@@ -31,9 +36,6 @@ a {
 
 @media (max-width: 1180px) {
 
-    html {
-        font-size: 10px;
-    }
     
     [class*="__container"] {
         padding-left: 1.5rem;
