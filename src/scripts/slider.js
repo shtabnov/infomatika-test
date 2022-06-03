@@ -125,6 +125,11 @@ if (wrapper.addEventListener) {
         wrapper.attachEvent("onmousewheel", onWheel);
     }
 
+wrapper.addEventListener('touchmove', (e) => {
+    let touchCount = e.touches[0].clientX;
+    console.log(touchCount);
+});
+
 function onWheel(e) {  
     e = e || window.event;
     var delta = e.wheelDelta || e.detail || e.deltaY ;
