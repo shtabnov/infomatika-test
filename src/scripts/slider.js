@@ -12,13 +12,14 @@ let obj = {
 
 for (let blocksItem of blocks) {
     blocksItem.addEventListener('click', (event) => {
-
-        let target = event.target
+        
+        let target = event.target;
+        
         // если клик происходит по тексту, присваеваем target родительский блок в котором находится текст
-        if (event.path[0] != blocksItem) {
-            target = event.path[1]
+        if (target != blocksItem) {
+            target = target.parentElement;
         }
-
+        
         if (target.classList.contains('one')) {
             count = 200;
             blocks.forEach((el, index) => {
@@ -60,7 +61,57 @@ for (let blocksItem of blocks) {
         }
     })
 }
+for (let blocksItem of blocks) {
+    blocksItem.addEventListener('touch', (event) => {
+        
+        let target = event.target;
+        
+        // если клик происходит по тексту, присваеваем target родительский блок в котором находится текст
+        if (target != blocksItem) {
+            target = target.parentElement;
+        }
+        
+        if (target.classList.contains('one')) {
+            count = 200;
+            blocks.forEach((el, index) => {
+                el.classList.remove('preprev', 'prev', 'next', 'prenext', 'active', 'prevnone', 'nextnone');
+                blocks[index].classList.add(obj.one[index]);
+            })
+        }
 
+        if (target.classList.contains('two')) {
+            count = 100;
+            blocks.forEach((el, index) => {
+                el.classList.remove('preprev', 'prev', 'next', 'prenext', 'active', 'prevnone', 'nextnone');
+                blocks[index].classList.add(obj.two[index]);
+            })
+        }
+
+        if (target.classList.contains('three')) {
+            count = 0;
+            blocks.forEach((el, index) => {
+                el.classList.remove('preprev', 'prev', 'next', 'prenext', 'active', 'prevnone', 'nextnone');
+                blocks[index].classList.add(obj.three[index]);
+            })
+        }
+
+        if (target.classList.contains('four')) {
+            count = -100;
+            blocks.forEach((el, index) => {
+                el.classList.remove('preprev', 'prev', 'next', 'prenext', 'active', 'prevnone', 'nextnone');
+                blocks[index].classList.add(obj.four[index]);
+            })
+        }
+
+        if (target.classList.contains('five')) {
+            count = -200;
+            blocks.forEach((el, index) => {
+                el.classList.remove('preprev', 'prev', 'next', 'prenext', 'active', 'prevnone', 'nextnone');
+                blocks[index].classList.add(obj.five[index]);
+            })
+        }
+    })
+}
 
 if (wrapper.addEventListener) {
     if ('onwheel' in document) {
