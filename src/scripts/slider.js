@@ -126,7 +126,7 @@ if (wrapper.addEventListener) {
     }
 
 wrapper.addEventListener('touchmove', (e) => {
-    let touchCount = e.touches[0].clientX;
+    let touchCount = e.touches[0].clientY;
     console.log(touchCount);
 });
 

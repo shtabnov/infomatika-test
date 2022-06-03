@@ -355,7 +355,12 @@ a:hover {
   align-items: center;
   margin-right: 3rem;
 }
-.control img {
+.control__enter:hover svg path {
+  stroke: gray;
+  transition: 300ms;
+}
+.control svg {
+  width: 3rem;
   height: 1.7rem;
   margin-right: 0.5rem;
 }
@@ -367,7 +372,7 @@ a:hover {
   justify-content: space-around;
 }
 .control__burger span {
-  height: 3px;
+  height: 2px;
   background-color: white;
 }
 .control__burger span:nth-child(1) {

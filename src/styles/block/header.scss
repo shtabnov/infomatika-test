@@ -47,9 +47,15 @@
         display: flex;
         align-items: center;
         margin-right: 3rem;
+
+        &:hover svg path {
+            stroke: gray;
+            transition: 300ms;
+        }
     }
 
-    & img {
+    & svg {
+        width: 3rem;
         height: 1.7rem;
         margin-right: 0.5rem;
     }
@@ -62,7 +68,7 @@
         justify-content: space-around;
 
         & span {
-            height: 3px;
+            height: 2px;
             background-color: white;
 
             &:nth-child(1) {
